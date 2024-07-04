@@ -1,0 +1,40 @@
+{
+  "name": "ai-sdk-js",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "tsd": {
+    "directory": "type-tests"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "scripts": {
+    "postinstall": "pnpm -r -w=false run compile",
+    "compile": "tsc",
+    "test": "pnpm -r -w=false run test",
+    "test:type": "tsd",
+    "lint": "pnpm -r -w=false run lint",
+    "lint:fix": "eslint . --fix && prettier . -w --log-level error"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@sap-cloud-sdk/eslint-config": "^3.14.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
+    "eslint": "^9.6.0",
+    "jest": "^30.0.0-alpha.3",
+    "nock": "^13.5.4",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3",
+    "tsd": "^0.31.0"
+  }
+}
